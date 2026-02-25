@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - System Request Aplikasi</title>
+    <title>Login - DSM Monitoring</title>
 
     {{-- CDN SweetAlert2 --}}
     <link rel="stylesheet" href="{{ asset('dist/css/sweetalert2/sweetalert2.min.css') }}">
