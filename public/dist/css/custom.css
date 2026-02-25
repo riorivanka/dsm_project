@@ -1,0 +1,9 @@
+.dot-outline {
+    color: white;              /* inside color */
+    font-size: 14px;           /* adjust size */
+    text-shadow:
+        -1px -1px 0 black,
+         1px -1px 0 black,
+        -1px  1px 0 black,
+         1px  1px 0 black;     /* outline */
+}
