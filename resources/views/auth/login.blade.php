@@ -60,9 +60,6 @@
             display: flex; 
         }
 
-        /* =========================================
-           5. PANEL KIRI & KANAN
-           ========================================= */
         .left-panel { 
             padding: 3.5rem 4rem; 
             background: #ffffff;
@@ -83,7 +80,6 @@
             .right-panel { display: none; }
         }
 
-        /* Elemen Kiri (Teks & Form) */
         .login-logo { 
             height: 55px; /* ukuran logo */
             margin-bottom: 25px; 

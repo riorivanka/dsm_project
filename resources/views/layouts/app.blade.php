@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
+    <link rel="icon" type="image/webp" href="{{ asset('assets/logo4.webp') }}">
+    <title>DSM Monitoring</title>
 
     <!-- AdminLTE CSS -->
     <link rel="stylesheet" href="{{ asset('adminlte/dist/css/adminlte.min.css') }}">
@@ -18,14 +19,12 @@
     {{-- Navbar --}}
     @include('layouts.navbar')
 
-    {{-- Content Wrapper --}}
     <div class="content-wrapper">
         @yield('content')
     </div>
 
-    {{-- Footer (optional) --}}
-    <footer class="main-footer">
-        <strong>Copyright &copy; 2026</strong>
+    <footer class="main-footer text-center">
+        <strong>&copy; PT Sumber Indah Lestari 2026</strong>
     </footer>
 
 </div>
