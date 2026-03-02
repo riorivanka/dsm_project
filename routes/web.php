@@ -43,3 +43,15 @@ Route::middleware('guest')->group(function () {
     Route::get('/login', [AuthController::class, 'showLoginForm'])->name('login');
     Route::post('/login', [AuthController::class, 'login']);
 });
+
+Route::get('/initiative/all', function () {
+    return view('initiatives.all');
+})->name('initiative.all');
+
+Route::get('/initiative/corporate', function () {
+    return view('initiatives.corporate');
+})->name('initiative.corporate');
+
+Route::get('/initiative/divisional', function () {
+    return view('initiatives.divisional');
+})->name('initiative.divisional');

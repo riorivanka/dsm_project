@@ -88,11 +88,18 @@
         <div class="row mb-4 justify-content-center">
             @php
                 $btnClass = "btn btn-block py-3 shadow-sm text-uppercase font-weight-bold text-white";
-                $btnStyle = "background-color: #0097a7; border-radius: 8px; font-size: 0.9rem; letter-spacing: 0.5px; border: none;";
+                // Tambahan text-decoration: none; agar tampilan a href tetap seperti tombol
+                $btnStyle = "background-color: #0097a7; border-radius: 8px; font-size: 0.9rem; letter-spacing: 0.5px; border: none; text-decoration: none;";
             @endphp
-            <div class="col-md-4 mb-3 mb-md-0"><button type="button" class="{{ $btnClass }}" style="{{ $btnStyle }}">All Group Initiative</button></div>
-            <div class="col-md-4 mb-3 mb-md-0"><button type="button" class="{{ $btnClass }}" style="{{ $btnStyle }}">Group Corporate Initiative</button></div>
-            <div class="col-md-4 mb-0"><button type="button" class="{{ $btnClass }}" style="{{ $btnStyle }}">Group Divisional Initiative</button></div>
+            <div class="col-md-4 mb-3 mb-md-0">
+                <a href="{{ route('initiative.all') }}" class="{{ $btnClass }}" style="{{ $btnStyle }}">All Group Initiative</a>
+            </div>
+            <div class="col-md-4 mb-3 mb-md-0">
+                <a href="{{ route('initiative.corporate') }}" class="{{ $btnClass }}" style="{{ $btnStyle }}">Group Corporate Initiative</a>
+            </div>
+            <div class="col-md-4 mb-0">
+                <a href="{{ route('initiative.divisional') }}" class="{{ $btnClass }}" style="{{ $btnStyle }}">Group Divisional Initiative</a>
+            </div>
         </div>
 
         <div class="row justify-content-center">
