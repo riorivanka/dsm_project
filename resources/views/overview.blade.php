@@ -4,7 +4,7 @@
 
 <div class="content-header">
     <div class="container-fluid px-md-4">
-        <div class="row mb-2">
+        <div class="row mb-4">
             <div class="col-sm-6">
                 <h3 class="m-0 font-weight-bold text-dark">Dashboard Overview</h3>
             </div>
@@ -17,8 +17,8 @@
 
         <div class="row mb-4">
             
-            <div class="col-md-5 col-12 mb-3 mb-md-0">
-                <div class="p-3 h-100 shadow-sm border-0" style="background-color: #ffe4cc; border-radius: 12px;">
+            <div class="col-md-5 col-12 mb-4 mb-md-0">
+                <div class="p-3 h-100 shadow-sm border-0" style="background-color: #d4edda; border-radius: 12px;">
                     <div class="d-flex align-items-center mb-3">
                         <div class="p-2 bg-white rounded-circle mr-3 d-flex align-items-center justify-content-center shadow-sm" style="width: 32px; height: 32px;">
                             <i class="fas fa-tags text-dark" style="font-size: 0.8rem;"></i>
@@ -44,7 +44,7 @@
             </div>
 
             <div class="col-md-7 col-12">
-                <div class="p-3 h-100 shadow-sm border-0" style="background-color: #ffe4cc; border-radius: 12px;">
+                <div class="p-3 h-100 shadow-sm border-0" style="background-color: #d4edda; border-radius: 12px;">
                     <div class="d-flex align-items-center mb-3">
                         <div class="p-2 bg-white rounded-circle mr-3 d-flex align-items-center justify-content-center shadow-sm" style="width: 32px; height: 32px;">
                             <i class="fas fa-traffic-light text-dark" style="font-size: 0.8rem;"></i>
@@ -85,34 +85,38 @@
 
         </div>
 
-        <div class="row mb-5 justify-content-center">
+        <div class="row mb-4 justify-content-center">
             @php
                 $btnClass = "btn btn-block py-3 shadow-sm text-uppercase font-weight-bold text-white";
                 $btnStyle = "background-color: #0097a7; border-radius: 8px; font-size: 0.9rem; letter-spacing: 0.5px; border: none;";
             @endphp
-            <div class="col-md-4 mb-3"><button type="button" class="{{ $btnClass }}" style="{{ $btnStyle }}">All Group Initiative</button></div>
-            <div class="col-md-4 mb-3"><button type="button" class="{{ $btnClass }}" style="{{ $btnStyle }}">Group Corporate Initiative</button></div>
-            <div class="col-md-4 mb-3"><button type="button" class="{{ $btnClass }}" style="{{ $btnStyle }}">Group Divisional Initiative</button></div>
+            <div class="col-md-4 mb-3 mb-md-0"><button type="button" class="{{ $btnClass }}" style="{{ $btnStyle }}">All Group Initiative</button></div>
+            <div class="col-md-4 mb-3 mb-md-0"><button type="button" class="{{ $btnClass }}" style="{{ $btnStyle }}">Group Corporate Initiative</button></div>
+            <div class="col-md-4 mb-0"><button type="button" class="{{ $btnClass }}" style="{{ $btnStyle }}">Group Divisional Initiative</button></div>
         </div>
 
-        <div class="row">
+        <div class="row justify-content-center">
             @php
                 $icons = [
-                    ['icon' => 'fas fa-laptop-code', 'title' => 'IT & Systems'], ['icon' => 'fas fa-money-bill-wave', 'title' => 'Finance'],
-                    ['icon' => 'fas fa-users', 'title' => 'Human Resources'], ['icon' => 'fas fa-bullhorn', 'title' => 'Marketing'],
-                    ['icon' => 'fas fa-chart-line', 'title' => 'Sales'], ['icon' => 'fas fa-cogs', 'title' => 'Operations'],
-                    ['icon' => 'fas fa-truck', 'title' => 'Logistics'], ['icon' => 'fas fa-building', 'title' => 'Corporate'],
-                    ['icon' => 'fas fa-leaf', 'title' => 'Sustainability'], ['icon' => 'fas fa-shield-alt', 'title' => 'Legal & Compliance'],
-                    ['icon' => 'fas fa-globe', 'title' => 'Expansions'], ['icon' => 'fas fa-boxes', 'title' => 'Inventory']
+                    ['icon' => 'fas fa-laptop-code', 'title' => 'IT'], 
+                    ['icon' => 'fas fa-money-bill-wave', 'title' => 'Finance'],
+                    ['icon' => 'fas fa-users', 'title' => 'Human Capital'], 
+                    ['icon' => 'fas fa-bullhorn', 'title' => 'Marketing'],
+                    ['icon' => 'fas fa-chart-line', 'title' => 'Business Controlling'], 
+                    ['icon' => 'fas fa-cogs', 'title' => 'Operations'],
+                    ['icon' => 'fas fa-truck', 'title' => 'Logistics'], 
+                    ['icon' => 'fas fa-building', 'title' => 'Property & Development'],
+                    ['icon' => 'fas fa-file-invoice-dollar', 'title' => 'Purchasing & GA'], 
+                    ['icon' => 'fas fa-tags', 'title' => 'Merchandising'],
+                    ['icon' => 'fas fa-layer-group', 'title' => 'Category'],
                 ];
-                // Dot diperkecil menjadi 8px agar lebih proporsional dengan font kecil
                 $cardDot = "display: inline-block; width: 8px; height: 8px; border-radius: 50%;";
             @endphp
 
             @foreach($icons as $data)
             <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
                 <div class="card border-0 shadow-sm h-100 position-relative overflow-hidden" style="border-radius: 12px;">
-                    <i class="{{ $data['icon'] }}" style="position: absolute; bottom: -8px; right: 0px; opacity: 0.15; font-size: 4.5rem; transform: rotate(-10deg); color: #fc7a2f; pointer-events: none; z-index: 0;"></i>
+                    <i class="{{ $data['icon'] }}" style="position: absolute; bottom: -8px; right: 0px; opacity: 0.31; font-size: 4.5rem; transform: rotate(-10deg); color: #fc7a2f; pointer-events: none; z-index: 0;"></i>
                     
                     <div class="card-body position-relative p-3" style="z-index: 1; background: transparent;">
                         <h6 class="font-weight-bold text-uppercase mb-2 border-bottom pb-2 text-dark" style="font-size: 0.75rem; letter-spacing: 0.5px;">{{ $data['title'] }}</h6>
