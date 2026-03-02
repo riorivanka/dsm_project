@@ -34,9 +34,6 @@ Route::get('/new_initiative', function () {
     return view('new_initiative');
 })->name('new_initiative');
 
-Route::get('/print_initiative', function () {
-    return view('print_initiative');
-})->name('print_initiative');
 
 Route::get('/format', function () {
     return view('format');

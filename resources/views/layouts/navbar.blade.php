@@ -41,44 +41,50 @@
         .ml-auto .nav-link {
             opacity: 0.9;
         }
+        
+        .navbar-container-custom {
+            display: flex;
+            width: 100%;
+            align-items: center;
+        }
     </style>
 
-    <a href="/home" class="navbar-brand d-flex align-items-center pl-3">
-        <img src="{{ asset('assets/logo4.webp') }}" alt="Logo" class="brand-logo-custom">
-    </a>
-
-    <ul class="navbar-nav ml-2">
-        <li class="nav-item {{ Request::is('home') ? 'active-page' : '' }}">
-            <a href="/home" class="nav-link" style="font-size: 15px;">
-                <i class="fas fa-tachometer-alt mr-2"></i>Overview
+    <div class="container-fluid px-md-4">
+        <div class="navbar-container-custom">
+            <img src="{{ asset('assets/logo4.webp') }}" alt="Logo" class="brand-logo-custom">
+            <a href="/home" class="navbar-brand d-flex align-items-center">
+                <!-- <img src="{{ asset('assets/logo4.webp') }}" alt="Logo" class="brand-logo-custom"> -->
             </a>
-        </li>
 
-        <li class="nav-item {{ Request::is('new_initiative') ? 'active-page' : '' }}">
-            <a href="/new_initiative" class="nav-link" style="font-size: 15px;">
-                <i class="fas fa-file-alt mr-2"></i>New Initiative
-            </a>
-        </li>
+            <ul class="navbar-nav ml-2">
+                <li class="nav-item {{ Request::is('home') ? 'active-page' : '' }}">
+                    <a href="/home" class="nav-link" style="font-size: 15px;">
+                        <i class="fas fa-tachometer-alt mr-2"></i>Overview
+                    </a>
+                </li>
 
-        <li class="nav-item {{ Request::is('print_initiative') ? 'active-page' : '' }}">
-            <a href="/print_initiative" class="nav-link" style="font-size: 15px;">
-                <i class="fas fa-print mr-2"></i>Initiative Output
-            </a>
-        </li>
-    </ul>
+                <li class="nav-item {{ Request::is('new_initiative') ? 'active-page' : '' }}">
+                    <a href="/new_initiative" class="nav-link" style="font-size: 15px;">
+                        <i class="fas fa-file-alt mr-2"></i>New Initiative
+                    </a>
+                </li>
+            </ul>
 
-    <ul class="navbar-nav ml-auto align-items-center pr-3">
-        <li class="nav-item">
-            <a href="#" class="nav-link" style="font-size: 14px;">
-                <i class="fas fa-book mr-2"></i>User Manual
-            </a>
-        </li>
+            <ul class="navbar-nav ml-auto align-items-center">
+                <li class="nav-item">
+                    <a href="#" class="nav-link" style="font-size: 14px;">
+                        <i class="fas fa-book mr-2"></i>User Manual
+                    </a>
+                </li>
 
-        <li class="nav-item">
-            <button type="submit" class="nav-link btn btn-link border-0"
-                    style="font-size: 14px; cursor: pointer;">
-                <i class="fas fa-sign-out-alt mr-2"></i>Logout
-            </button>
-        </li>
-    </ul>
+                <li class="nav-item">
+                    <button type="submit" class="nav-link btn btn-link border-0"
+                            style="font-size: 14px; cursor: pointer;">
+                        <i class="fas fa-sign-out-alt mr-2"></i>Logout
+                    </button>
+                </li>
+            </ul>
+
+        </div>
+    </div>
 </nav>

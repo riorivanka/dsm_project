@@ -2,95 +2,6 @@
 
 @section('content')
 
-<style>
-    .hover-card {
-        transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-        border-radius: 12px;
-        border: none;
-        overflow: hidden; 
-        position: relative;
-        background-color: #ffffff;
-    }
-    .hover-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 10px 20px rgba(0,0,0,0.12) !important;
-    }
-
-    /* traffic light dots */
-    .dot-outline {
-        color: transparent;
-        border: 2px solid #6c757d;
-        border-radius: 50%;
-        display: inline-block;
-        width: 12px;
-        height: 12px;
-        margin-right: 2px;
-    }
-    .dot-solid {
-        font-size: 14px;
-        line-height: 1;
-    }
-
-    /* watermark icon di card */
-    .icon-watermark {
-        position: absolute;
-        bottom: -5px;
-        right: 5px;
-        opacity: 0.25; 
-        font-size: 6rem; 
-        transform: rotate(-10deg);
-        z-index: 0;
-        pointer-events: none; 
-    }
-
-    .card-body {
-        position: relative;
-        z-index: 1; 
-        background: transparent !important; 
-    }
-
-    /* legend box */
-    .legend-box {
-        background: #ffffff;
-        border-radius: 10px;
-        padding: 15px 20px;
-        height: 100%;
-        border-left: 5px solid;
-        box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-    }
-    .legend-badge {
-        font-size: 0.75rem;
-        letter-spacing: 1px;
-        margin-bottom: 10px;
-        display: inline-block;
-    }
-
-    /* buttons */
-    .btn-initiative {
-        transition: all 0.3s ease;
-        border-radius: 8px;
-        padding: 12px 20px;
-        font-size: 1rem;
-        font-weight: 600;
-        letter-spacing: 0.5px;
-        border: none;
-    }
-    .btn-initiative:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 8px 15px rgba(0,0,0,0.15);
-        filter: brightness(110%);
-    }
-
-    /* utility perataan angka */
-    .data-row {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 6px;
-        font-size: 0.9rem;
-    }
-</style>
-
 <div class="content-header">
     <div class="container-fluid px-md-4">
         <div class="row mb-2">
@@ -104,131 +15,127 @@
 <div class="content">
     <div class="container-fluid px-md-4">  
 
-        <div class="row mb-5">
+        <div class="row mb-4">
+            
             <div class="col-md-5 col-12 mb-3 mb-md-0">
-                <div class="legend-box" style="border-left-color: #007bff;">
-                    <span class="badge badge-primary legend-badge px-2 py-1"><i class="fas fa-info-circle mr-1"></i> PEMBERITAHUAN</span>
-                    <h6 class="font-weight-bold text-uppercase mb-3"><i class="fas fa-tags mr-2 text-primary"></i>Type Initiative</h6>
-                    <div class="row">
-                        <div class="col-12 text-muted">
-                            <div class="mb-1"><strong>C</strong> <i class="fas fa-arrow-right mx-2 text-secondary" style="font-size: 0.8em;"></i> CORE</div>
-                            <div class="mb-1"><strong>E</strong> <i class="fas fa-arrow-right mx-2 text-secondary" style="font-size: 0.8em;"></i> EFFICIENCY</div>
-                            <div><strong>O</strong> <i class="fas fa-arrow-right mx-2 text-secondary" style="font-size: 0.8em;"></i> OPERATION EXCELLENCE</div>
+                <div class="p-3 h-100 shadow-sm border-0" style="background-color: #ffe4cc; border-radius: 12px;">
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="p-2 bg-white rounded-circle mr-3 d-flex align-items-center justify-content-center shadow-sm" style="width: 32px; height: 32px;">
+                            <i class="fas fa-tags text-dark" style="font-size: 0.8rem;"></i>
+                        </div>
+                        <h6 class="font-weight-bold text-uppercase mb-0 text-dark small" style="letter-spacing: 0.5px; font-size: 0.8rem;">Type Initiative</h6>
+                    </div>
+                    
+                    <div class="pl-1">
+                        <div class="d-flex align-items-center mb-2">
+                            <span class="text-orange mr-2 text-center font-weight-bold" style="width: 20px; font-size: 1.0rem; color: #fc7a2f;">C</span> 
+                            <span class="text-muted small font-weight-bold">CORE INITIATIVE</span>
+                        </div>
+                        <div class="d-flex align-items-center mb-2">
+                            <span class="text-orange mr-2 text-center font-weight-bold" style="width: 20px; font-size: 1.0rem; color: #fc7a2f;">E</span> 
+                            <span class="text-muted small font-weight-bold">EFFICIENCY INITIATIVE</span>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <span class="text-orange mr-2 text-center font-weight-bold" style="width: 20px; font-size: 1.0rem; color: #fc7a2f;">O</span> 
+                            <span class="text-muted small font-weight-bold">OPERATION EXCELLENCE</span>
                         </div>
                     </div>
                 </div>
             </div>
 
             <div class="col-md-7 col-12">
-                <div class="legend-box" style="border-left-color: #28a745;">
-                    <span class="badge badge-success legend-badge px-2 py-1"><i class="fas fa-info-circle mr-1"></i> PEMBERITAHUAN</span>
-                    <h6 class="font-weight-bold text-uppercase mb-3"><i class="fas fa-traffic-light mr-2 text-success"></i>Traffic Light Initiative</h6>
-                    <div class="row text-muted" style="font-size: 0.95rem;">
+                <div class="p-3 h-100 shadow-sm border-0" style="background-color: #ffe4cc; border-radius: 12px;">
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="p-2 bg-white rounded-circle mr-3 d-flex align-items-center justify-content-center shadow-sm" style="width: 32px; height: 32px;">
+                            <i class="fas fa-traffic-light text-dark" style="font-size: 0.8rem;"></i>
+                        </div>
+                        <h6 class="font-weight-bold text-uppercase mb-0 text-dark small" style="letter-spacing: 0.5px; font-size: 0.8rem;">Traffic Light Status</h6>
+                    </div>
+
+                    <div class="row pl-1 font-weight-bold">
+                        @php $dotBase = "display: inline-block; width: 12px; height: 12px; border-radius: 50%; margin-right: 10px; border: 1px solid rgba(0,0,0,0.1); flex-shrink: 0;"; @endphp
+                        
                         <div class="col-md-6 col-12">
-                            <div class="d-flex align-items-center mb-2"><span class="text-danger dot-solid mr-2">●</span> PROJECT BEHIND TARGET</div>
-                            <div class="d-flex align-items-center mb-2"><span class="text-warning dot-solid mr-2">●</span> PROJECT WITH ISSUES</div>
-                            <div class="d-flex align-items-center mb-2"><span class="text-success dot-solid mr-2">●</span> PROJECT ON TARGET</div>
+                            <div class="d-flex align-items-center mb-2">
+                                <span style="{{ $dotBase }} background-color: #dc3545;"></span> 
+                                <span class="text-muted small">BEHIND TARGET</span>
+                            </div>
+                            <div class="d-flex align-items-center mb-2">
+                                <span style="{{ $dotBase }} background-color: #ffc107;"></span> 
+                                <span class="text-muted small">WITH ISSUES</span>
+                            </div>
+                            <div class="d-flex align-items-center mb-2">
+                                <span style="{{ $dotBase }} background-color: #28a745;"></span> 
+                                <span class="text-muted small">ON TARGET</span>
+                            </div>
                         </div>
                         <div class="col-md-6 col-12">
-                            <div class="d-flex align-items-center mb-2"><span class="dot-outline mr-2"></span> PROJECT NOT YET STARTED</div>
-                            <div class="d-flex align-items-center mb-2"><span class="text-dark dot-solid mr-2">●</span> PROJECT CLOSED</div>
+                            <div class="d-flex align-items-center mb-2">
+                                <span style="display: inline-block; width: 12px; height: 12px; border-radius: 50%; margin-right: 10px; border: 1.5px solid #6c757d; flex-shrink: 0;"></span> 
+                                <span class="text-muted small">NOT YET STARTED</span>
+                            </div>
+                            <div class="d-flex align-items-center mb-2">
+                                <span style="{{ $dotBase }} background-color: #343a40;"></span> 
+                                <span class="text-muted small">CLOSED PROJECT</span>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+
         </div>
 
         <div class="row mb-5 justify-content-center">
-            <div class="col-md-4 col-12 mb-3">
-                <button type="button" class="btn btn-primary btn-block btn-initiative shadow-sm text-uppercase">
-                    All Group Initiative
-                </button>
-            </div>
-            <div class="col-md-4 col-12 mb-3">
-                <button type="button" class="btn btn-info btn-block btn-initiative shadow-sm text-uppercase text-white">
-                    Group Corporate Initiative
-                </button>
-            </div>
-            <div class="col-md-4 col-12 mb-3">
-                <button type="button" class="btn btn-secondary btn-block btn-initiative shadow-sm text-uppercase">
-                    Group Divisional Initiative
-                </button>
-            </div>
+            @php
+                $btnClass = "btn btn-block py-3 shadow-sm text-uppercase font-weight-bold text-white";
+                $btnStyle = "background-color: #0097a7; border-radius: 8px; font-size: 0.9rem; letter-spacing: 0.5px; border: none;";
+            @endphp
+            <div class="col-md-4 mb-3"><button type="button" class="{{ $btnClass }}" style="{{ $btnStyle }}">All Group Initiative</button></div>
+            <div class="col-md-4 mb-3"><button type="button" class="{{ $btnClass }}" style="{{ $btnStyle }}">Group Corporate Initiative</button></div>
+            <div class="col-md-4 mb-3"><button type="button" class="{{ $btnClass }}" style="{{ $btnStyle }}">Group Divisional Initiative</button></div>
         </div>
 
         <div class="row">
             @php
                 $icons = [
-                    ['icon' => 'fas fa-laptop-code text-primary', 'title' => 'IT & Systems'],
-                    ['icon' => 'fas fa-money-bill-wave text-success', 'title' => 'Finance'],
-                    ['icon' => 'fas fa-users text-warning', 'title' => 'Human Resources'],
-                    ['icon' => 'fas fa-bullhorn text-danger', 'title' => 'Marketing'],
-                    ['icon' => 'fas fa-chart-line text-info', 'title' => 'Sales'],
-                    ['icon' => 'fas fa-cogs text-secondary', 'title' => 'Operations'],
-                    ['icon' => 'fas fa-truck text-dark', 'title' => 'Logistics'],
-                    ['icon' => 'fas fa-building text-primary', 'title' => 'Corporate'],
-                    ['icon' => 'fas fa-leaf text-success', 'title' => 'Sustainability'],
-                    ['icon' => 'fas fa-shield-alt text-danger', 'title' => 'Legal & Compliance'],
-                    ['icon' => 'fas fa-globe text-info', 'title' => 'Expansions'],
-                    ['icon' => 'fas fa-boxes text-warning', 'title' => 'Inventory']
+                    ['icon' => 'fas fa-laptop-code', 'title' => 'IT & Systems'], ['icon' => 'fas fa-money-bill-wave', 'title' => 'Finance'],
+                    ['icon' => 'fas fa-users', 'title' => 'Human Resources'], ['icon' => 'fas fa-bullhorn', 'title' => 'Marketing'],
+                    ['icon' => 'fas fa-chart-line', 'title' => 'Sales'], ['icon' => 'fas fa-cogs', 'title' => 'Operations'],
+                    ['icon' => 'fas fa-truck', 'title' => 'Logistics'], ['icon' => 'fas fa-building', 'title' => 'Corporate'],
+                    ['icon' => 'fas fa-leaf', 'title' => 'Sustainability'], ['icon' => 'fas fa-shield-alt', 'title' => 'Legal & Compliance'],
+                    ['icon' => 'fas fa-globe', 'title' => 'Expansions'], ['icon' => 'fas fa-boxes', 'title' => 'Inventory']
                 ];
+                // Dot diperkecil menjadi 8px agar lebih proporsional dengan font kecil
+                $cardDot = "display: inline-block; width: 8px; height: 8px; border-radius: 50%;";
             @endphp
 
             @foreach($icons as $data)
             <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
-                <div class="card hover-card shadow-sm h-100">
+                <div class="card border-0 shadow-sm h-100 position-relative overflow-hidden" style="border-radius: 12px;">
+                    <i class="{{ $data['icon'] }}" style="position: absolute; bottom: -8px; right: 0px; opacity: 0.15; font-size: 4.5rem; transform: rotate(-10deg); color: #fc7a2f; pointer-events: none; z-index: 0;"></i>
                     
-                    <i class="{{ $data['icon'] }} icon-watermark"></i>
-                    
-                    <div class="card-body">
-                        <h6 class="font-weight-bold text-uppercase mb-3 border-bottom pb-2">{{ $data['title'] }}</h6>
+                    <div class="card-body position-relative p-3" style="z-index: 1; background: transparent;">
+                        <h6 class="font-weight-bold text-uppercase mb-2 border-bottom pb-2 text-dark" style="font-size: 0.75rem; letter-spacing: 0.5px;">{{ $data['title'] }}</h6>
                         
-                        <div class="row text-muted font-weight-bold">
-                            <div class="col-7 pr-3">
-                                <div class="data-row">
-                                    <span class="text-danger dot-solid">●</span> 
-                                    <span class="text-dark">0</span>
-                                </div>
-                                <div class="data-row">
-                                    <span class="text-warning dot-solid">●</span> 
-                                    <span class="text-dark">0</span>
-                                </div>
-                                <div class="data-row">
-                                    <span class="text-success dot-solid">●</span> 
-                                    <span class="text-dark">0</span>
-                                </div>
-                                <div class="data-row">
-                                    <span class="dot-outline"></span> 
-                                    <span class="text-dark">0</span>
-                                </div>
-                                <div class="data-row">
-                                    <span class="text-dark dot-solid">●</span> 
-                                    <span class="text-dark">0</span>
-                                </div>
+                        <div class="row no-gutters text-muted font-weight-bold" style="font-size: 0.8rem;">
+                            <div class="col-7 pr-2">
+                                <div class="d-flex justify-content-between align-items-center mb-1"><span style="{{ $cardDot }} background-color: #dc3545;"></span> <span class="text-dark">0</span></div>
+                                <div class="d-flex justify-content-between align-items-center mb-1"><span style="{{ $cardDot }} background-color: #ffc107;"></span> <span class="text-dark">0</span></div>
+                                <div class="d-flex justify-content-between align-items-center mb-1"><span style="{{ $cardDot }} background-color: #28a745;"></span> <span class="text-dark">0</span></div>
+                                <div class="d-flex justify-content-between align-items-center mb-1"><span style="{{ $cardDot }} border: 1px solid #6c757d;"></span> <span class="text-dark">0</span></div>
+                                <div class="d-flex justify-content-between align-items-center"><span style="{{ $cardDot }} background-color: #343a40;"></span> <span class="text-dark">0</span></div>
                             </div>
-                            
                             <div class="col-5 pl-3 border-left" style="border-color: #f0f0f0 !important;">
-                                <div class="data-row">
-                                    <span class="text-primary">C</span> 
-                                    <span class="text-dark">0</span>
-                                </div>
-                                <div class="data-row">
-                                    <span class="text-primary">E</span> 
-                                    <span class="text-dark">0</span>
-                                </div>
-                                <div class="data-row">
-                                    <span class="text-primary">O</span> 
-                                    <span class="text-dark">0</span>
-                                </div>
+                                <div class="d-flex justify-content-between mb-1"><span class="text-primary">C</span> <span class="text-dark">0</span></div>
+                                <div class="d-flex justify-content-between mb-1"><span class="text-primary">E</span> <span class="text-dark">0</span></div>
+                                <div class="d-flex justify-content-between"><span class="text-primary">O</span> <span class="text-dark">0</span></div>
                             </div>
                         </div>
-
                     </div>
                 </div>
             </div>
             @endforeach
         </div>
-
     </div>
 </div>
 
