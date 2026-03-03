@@ -4,7 +4,7 @@
 
 <div class="content-header pb-2">
     <div class="container-fluid px-md-4">
-        <div class="row mb-4">
+        <div class="row mb-3">
             <div class="col-sm-6">
                 <h3 class="m-0 font-weight-bold text-dark">Input Initiative Charter</h3>
             </div>
@@ -12,11 +12,11 @@
     </div>
 </div>
 
-<div class="content">
+<div class="content pb-4">
     <div class="container-fluid px-md-4">
 
-        <div class="card shadow-sm border-0 mb-4" style="border-radius: 12px; background-color: #FFFFFF;">
-            
+        <div class="card shadow-sm border-0 mb-0" style="border-radius: 12px; background-color: #FFFFFF;">
+
             <div class="card-header bg-transparent px-4 py-3 border-bottom" style="border-color: rgba(0,0,0,0.08) !important;">
                 <h5 class="m-0 font-weight-bold text-dark">
                     <i class="fas fa-edit mr-2" style="color: #fc7a2f;"></i>Initiative Form
@@ -112,7 +112,8 @@
                         <textarea id="initiative_background" class="form-control border-0 shadow-sm" rows="4" style="border-radius: 8px;" placeholder="Describe the background..."></textarea>
                     </div>
 
-                    <div class="form-group mb-0"> <label class="font-weight-bold text-muted small text-uppercase mb-2 d-block">
+                    <div class="form-group mb-0">
+                        <label class="font-weight-bold text-muted small text-uppercase mb-2 d-block">
                             <i class="fas fa-bullseye mr-1 text-orange" style="color: #fc7a2f;"></i> Annual Target
                         </label>
                         <textarea id="annual_target" class="form-control border-0 shadow-sm" rows="4" style="border-radius: 8px;" placeholder="Specify the targets..."></textarea>
@@ -125,10 +126,8 @@
                         <i class="fas fa-paper-plane mr-2"></i> Submit Charter
                     </button>
                 </div>
-
             </form>
         </div>
-
     </div>
 </div>
 
