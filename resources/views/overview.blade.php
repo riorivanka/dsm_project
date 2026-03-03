@@ -94,10 +94,10 @@
                 <a href="{{ route('initiative.all') }}" class="{{ $btnClass }}" style="{{ $btnStyle }}">All Group Initiative</a>
             </div>
             <div class="col-md-4 mb-3 mb-md-0">
-                <a href="{{ route('initiative.corporate') }}" class="{{ $btnClass }}" style="{{ $btnStyle }}">Group Corporate Initiative</a>
+                <a href="{{ route('initiative.corporate') }}" class="{{ $btnClass }}" style="{{ $btnStyle }}">Corporate Group Initiative</a>
             </div>
             <div class="col-md-4 mb-0">
-                <a href="{{ route('initiative.divisional') }}" class="{{ $btnClass }}" style="{{ $btnStyle }}">Group Divisional Initiative</a>
+                <a href="{{ route('initiative.divisional') }}" class="{{ $btnClass }}" style="{{ $btnStyle }}">Divisional Group Initiative</a>
             </div>
         </div>
 
