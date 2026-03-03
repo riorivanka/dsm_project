@@ -14,9 +14,9 @@ use App\Http\Controllers\AuthController;
 |
 */
 
-Route::get('/', function () {
-    return redirect()->route('login');
-});
+// Route::get('/', function () {
+//     return redirect()->route('login');
+// });
 
 Route::get('/home', function () {
     return view('overview');
@@ -26,18 +26,10 @@ Route::get('/', function () {
     return view('overview');
 })->name('home');
 
-// Route::get('/overview', function () {
-//     return view('overview');
-// })->name('overview');
 
 Route::get('/new_initiative', function () {
     return view('new_initiative');
 })->name('new_initiative');
-
-
-Route::get('/format', function () {
-    return view('format');
-})->name('format');
 
 Route::middleware('guest')->group(function () {
     Route::get('/login', [AuthController::class, 'showLoginForm'])->name('login');

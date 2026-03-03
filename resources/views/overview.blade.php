@@ -88,7 +88,6 @@
         <div class="row mb-4 justify-content-center">
             @php
                 $btnClass = "btn btn-block py-3 shadow-sm text-uppercase font-weight-bold text-white";
-                // Tambahan text-decoration: none; agar tampilan a href tetap seperti tombol
                 $btnStyle = "background-color: #0097a7; border-radius: 8px; font-size: 0.9rem; letter-spacing: 0.5px; border: none; text-decoration: none;";
             @endphp
             <div class="col-md-4 mb-3 mb-md-0">
