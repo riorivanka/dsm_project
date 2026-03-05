@@ -46,3 +46,5 @@ Route::get('/initiative/corporate', function () {
 Route::get('/initiative/divisional', function () {
     return view('initiatives.divisional');
 })->name('initiative.divisional');
+
+Route::post('/logout', [AuthController::class, 'logout'])->name('logout');

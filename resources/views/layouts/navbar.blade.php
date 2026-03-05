@@ -8,14 +8,15 @@
     }
 </style>
 
+<script src="{{ asset('dist/js/sweetalert2/sweetalert2.min.js') }}"></script>
+
 <nav class="main-header navbar navbar-expand navbar-dark border-bottom-0 shadow-sm sticky-top" style="background-color: #fc7a2f;">
     <div class="container-fluid px-md-4">
         <div style="display: flex; width: 100%; align-items: center;">
             
             <img src="{{ asset('assets/logo4.webp') }}" alt="Logo" style="height: 38px; width: auto; border: 1px solid #ffffff; border-radius: 8px; box-shadow: 0 0 0 0.5px #ffffff;">
             
-            <a href="/" class="navbar-brand d-flex align-items-center">
-                </a>
+            <a href="/" class="navbar-brand d-flex align-items-center"></a>
 
             <ul class="navbar-nav ml-2">
                 <li class="nav-item">
@@ -39,7 +40,7 @@
                 </li>
 
                 <li class="nav-item">
-                    <button type="submit" class="nav-link btn btn-link border-0" style="transition: all 0.2s ease-in-out; padding: 8px 18px; color: #ffffff; border-radius: 6px; margin: 0 4px; display: flex; align-items: center; font-size: 14px; opacity: 0.9; cursor: pointer;">
+                    <button type="button" onclick="handleLogout()" class="nav-link btn btn-link border-0" style="transition: all 0.2s ease-in-out; padding: 8px 18px; color: #ffffff; border-radius: 6px; margin: 0 4px; display: flex; align-items: center; font-size: 14px; opacity: 0.9; cursor: pointer;">
                         <i class="fas fa-sign-out-alt mr-2"></i>Logout
                     </button>
                 </li>
@@ -48,3 +49,28 @@
         </div>
     </div>
 </nav>
+
+<form id="logout-form-manual" action="{{ route('logout') }}" method="POST" style="display: none;">
+    @csrf
+</form>
+
+<script>
+function handleLogout() {
+    Swal.fire({
+        title: 'Konfirmasi Keluar',
+        text: "Apakah Anda yakin ingin logout?",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#fc7a2f', // Senada dengan navbar orange
+        cancelButtonColor: '#6c757d',
+        confirmButtonText: 'Ya, Logout!',
+        cancelButtonText: 'Batal',
+        reverseButtons: true
+    }).then((result) => {
+        if (result.isConfirmed) {
+            // Submit form logout
+            document.getElementById('logout-form-manual').submit();
+        }
+    })
+}
+</script>
