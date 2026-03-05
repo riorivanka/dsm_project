@@ -14,12 +14,12 @@
             
             <img src="{{ asset('assets/logo4.webp') }}" alt="Logo" style="height: 38px; width: auto; border: 1px solid #ffffff; border-radius: 8px; box-shadow: 0 0 0 0.5px #ffffff;">
             
-            <a href="/home" class="navbar-brand d-flex align-items-center">
+            <a href="/" class="navbar-brand d-flex align-items-center">
                 </a>
 
             <ul class="navbar-nav ml-2">
                 <li class="nav-item">
-                    <a href="/home" class="nav-link" style="transition: all 0.2s ease-in-out; padding: 8px 18px; color: #ffffff; border-radius: 6px; margin: 0 4px; display: flex; align-items: center; font-size: 15px; {{ Request::is('/', 'home') ? 'background-color: #0097a7; font-weight: 700; pointer-events: none; cursor: default; box-shadow: inset 0 2px 4px rgba(0,0,0,0.1);' : '' }}">
+                    <a href="/" class="nav-link" style="transition: all 0.2s ease-in-out; padding: 8px 18px; color: #ffffff; border-radius: 6px; margin: 0 4px; display: flex; align-items: center; font-size: 15px; {{ Request::is('/', 'home') ? 'background-color: #0097a7; font-weight: 700; pointer-events: none; cursor: default; box-shadow: inset 0 2px 4px rgba(0,0,0,0.1);' : '' }}">
                         <i class="fas fa-tachometer-alt mr-2"></i>Overview
                     </a>
                 </li>

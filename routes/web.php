@@ -18,17 +18,16 @@ use App\Http\Controllers\AuthController;
 //     return redirect()->route('login');
 // });
 
-Route::get('/home', function () {
-    return view('overview');
-})->name('home');
-
 Route::get('/', function () {
-    return view('overview');
+    return view('overview.overview');
 })->name('home');
 
+Route::get('/overview_user', function () {
+    return view('overview.overview_user');
+})->name('overview_user');
 
 Route::get('/new_initiative', function () {
-    return view('new_initiative');
+    return view('initiatives.new_initiative');
 })->name('new_initiative');
 
 Route::middleware('guest')->group(function () {
