@@ -1,3 +1,4 @@
+@push('styles')
 <style>
     .navbar-nav .nav-item .nav-link:hover {
         background-color: rgba(0, 150, 167, 0.3) !important; 
@@ -7,14 +8,13 @@
         display: none !important;
     }
 </style>
-
-<script src="{{ asset('dist/js/sweetalert2/sweetalert2.min.js') }}"></script>
+@endpush
 
 <nav class="main-header navbar navbar-expand navbar-dark border-bottom-0 shadow-sm sticky-top" style="background-color: #fc7a2f;">
     <div class="container-fluid px-md-4">
         <div style="display: flex; width: 100%; align-items: center;">
             
-            <img src="{{ asset('assets/logo4.webp') }}" alt="Logo" style="height: 38px; width: auto; border: 1px solid #ffffff; border-radius: 8px; box-shadow: 0 0 0 0.5px #ffffff;">
+            <img src="{{ asset('assets/logo4.webp') }}" alt="Logo" width="120" height="38" style="height: 38px; width: auto; border: 1px solid #ffffff; border-radius: 8px; box-shadow: 0 0 0 0.5px #ffffff;">
             
             <a href="/" class="navbar-brand d-flex align-items-center"></a>
 
@@ -59,6 +59,8 @@
     @csrf
 </form>
 
+@push('scripts')
+<script src="{{ asset('dist/js/sweetalert2/sweetalert2.min.js') }}"></script>
 <script>
 function handleLogout() {
     Swal.fire({
@@ -78,3 +80,4 @@ function handleLogout() {
     })
 }
 </script>
+@endpush
