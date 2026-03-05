@@ -19,14 +19,19 @@
             <a href="/" class="navbar-brand d-flex align-items-center"></a>
 
             <ul class="navbar-nav ml-2">
+                
                 <li class="nav-item">
-                    <a href="/" class="nav-link" style="transition: all 0.2s ease-in-out; padding: 8px 18px; color: #ffffff; border-radius: 6px; margin: 0 4px; display: flex; align-items: center; font-size: 15px; {{ Request::is('/', 'home') ? 'background-color: #0097a7; font-weight: 700; pointer-events: none; cursor: default; box-shadow: inset 0 2px 4px rgba(0,0,0,0.1);' : '' }}">
+                    <a href="{{ session('role_akses') == 'admin' ? route('home') : route('overview_user') }}" 
+                       class="nav-link" 
+                       style="transition: all 0.2s ease-in-out; padding: 8px 18px; color: #ffffff; border-radius: 6px; margin: 0 4px; display: flex; align-items: center; font-size: 15px; {{ Request::is('/', 'home', 'overview_user') ? 'background-color: #0097a7; font-weight: 700; pointer-events: none; cursor: default; box-shadow: inset 0 2px 4px rgba(0,0,0,0.1);' : '' }}">
                         <i class="fas fa-tachometer-alt mr-2"></i>Overview
                     </a>
                 </li>
 
                 <li class="nav-item">
-                    <a href="/new_initiative" class="nav-link" style="transition: all 0.2s ease-in-out; padding: 8px 18px; color: #ffffff; border-radius: 6px; margin: 0 4px; display: flex; align-items: center; font-size: 15px; {{ Request::is('new_initiative') ? 'background-color: #0097a7; font-weight: 700; pointer-events: none; cursor: default; box-shadow: inset 0 2px 4px rgba(0,0,0,0.1);' : '' }}">
+                    <a href="{{ route('new_initiative') }}" 
+                       class="nav-link" 
+                       style="transition: all 0.2s ease-in-out; padding: 8px 18px; color: #ffffff; border-radius: 6px; margin: 0 4px; display: flex; align-items: center; font-size: 15px; {{ Request::is('new_initiative') ? 'background-color: #0097a7; font-weight: 700; pointer-events: none; cursor: default; box-shadow: inset 0 2px 4px rgba(0,0,0,0.1);' : '' }}">
                         <i class="fas fa-file-alt mr-2"></i>New Initiative
                     </a>
                 </li>
@@ -61,14 +66,13 @@ function handleLogout() {
         text: "Apakah Anda yakin ingin logout?",
         icon: 'warning',
         showCancelButton: true,
-        confirmButtonColor: '#fc7a2f', // Senada dengan navbar orange
+        confirmButtonColor: '#FF0000',
         cancelButtonColor: '#6c757d',
         confirmButtonText: 'Ya, Logout!',
         cancelButtonText: 'Batal',
         reverseButtons: true
     }).then((result) => {
         if (result.isConfirmed) {
-            // Submit form logout
             document.getElementById('logout-form-manual').submit();
         }
     })
