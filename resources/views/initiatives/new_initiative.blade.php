@@ -4,7 +4,7 @@
 
 <div class="content-header pb-2">
     <div class="container-fluid px-md-4">
-        <div class="row mb-3">
+        <div class="row mb-1">
             <div class="col-sm-6">
                 <h3 class="m-0 font-weight-bold text-dark">Input Initiative Charter</h3>
             </div>

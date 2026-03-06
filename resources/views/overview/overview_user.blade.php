@@ -52,7 +52,7 @@
 @section('content')
 <div class="content-header">
     <div class="container-fluid px-md-4">
-        <div class="row mb-4">
+        <div class="row mb-1">
             <div class="col-sm-6">
                 <h3 class="m-0 font-weight-bold text-dark">Dashboard Overview</h3>
             </div>

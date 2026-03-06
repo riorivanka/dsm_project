@@ -38,10 +38,12 @@
             </ul>
 
             <ul class="navbar-nav ml-auto align-items-center">
+                
                 <li class="nav-item">
-                    <a href="#" class="nav-link" style="transition: all 0.2s ease-in-out; padding: 8px 18px; color: #ffffff; border-radius: 6px; margin: 0 4px; display: flex; align-items: center; font-size: 14px; opacity: 0.9;">
-                        <i class="fas fa-book mr-2"></i>User Manual
-                    </a>
+                    <span class="nav-link" style="padding: 8px 18px; color: #ffffff; margin: 0 4px; display: flex; align-items: center; font-size: 14px; font-weight: 600; cursor: default;">
+                        <i class="fas fa-user-circle mr-2"></i> 
+                        Halo, {{ Auth::check() ? Auth::user()->name : (session('nama') ?? 'User') }}
+                    </span>
                 </li>
 
                 <li class="nav-item">
