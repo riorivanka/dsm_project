@@ -8,7 +8,7 @@
         display: none;
         -webkit-appearance: none;
     }
-    
+
     input[type="month"]::-webkit-calendar-picker-indicator {
         display: none;
         -webkit-appearance: none;
@@ -18,22 +18,22 @@
 <div class="content-header pt-4 pb-2">
     <div class="container-fluid px-md-4">
         <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center mb-4">
-            
+
             <div class="mb-3 mb-md-0 d-flex align-items-center">
                 <a href="{{ url()->previous() }}" class="d-flex align-items-center justify-content-center rounded-circle mr-3 text-decoration-none shadow-sm" style="width: 45px; height: 45px; background-color: #fff0e6; transition: all 0.2s;">
                     <i class="fas fa-arrow-left" style="color: #fc7a2f; font-size: 1.1rem;"></i>
                 </a>
                 <div>
-                    <h3 class="m-0 font-weight-bold" style="color: #2d3748; font-size: 1.5rem;">List Initiatives</h3>
+                    <h3 class="m-0 font-weight-bold" style="color: #009ec2; font-size: 1.5rem;">List Initiatives</h3>
                     <p class="text-muted m-0 font-weight-bold" style="font-size: 0.75rem; letter-spacing: 0.5px;">CORPORATE GROUP INITIATIVE</p>
                 </div>
             </div>
-            
+
             <div class="d-flex align-items-center px-3 py-2 rounded-pill bg-white shadow-sm border-0" style="width: 100%; max-width: 320px;">
                 <i class="fas fa-search text-muted mr-2" style="font-size: 0.9rem;"></i>
                 <input type="text" class="form-control border-0 bg-transparent shadow-none p-0" placeholder="Search initiative..." style="font-size: 0.9rem; outline: none;">
             </div>
-            
+
         </div>
     </div>
 </div>
@@ -43,18 +43,18 @@
 
         <div class="d-flex flex-column flex-xl-row justify-content-between align-items-xl-center mb-4 bg-white p-3 shadow-sm" style="border-radius: 16px;">
             <div class="mb-3 mb-xl-0 border-right-xl pr-xl-3" style="border-color: #edf2f7 !important;">
-                <div class="d-flex align-items-center px-3 py-2 rounded-pill shadow-sm" 
+                <div class="d-flex align-items-center px-3 py-2 rounded-pill shadow-sm"
                      style="background-color: #ffffff; border: 2px solid #edf2f7; transition: all 0.3s ease; cursor: pointer;"
-                     onmouseover="this.style.borderColor='#fc7a2f'; this.style.boxShadow='0 4px 10px rgba(252, 122, 47, 0.15)'" 
+                     onmouseover="this.style.borderColor='#fc7a2f'; this.style.boxShadow='0 4px 10px rgba(252, 122, 47, 0.15)'"
                      onmouseout="this.style.borderColor='#edf2f7'; this.style.boxShadow='0 .125rem .25rem rgba(0,0,0,.075)'"
                      onclick="document.getElementById('monthPicker').showPicker()">
-                    
+
                     <i class="far fa-calendar-alt mr-2" style="color: #fc7a2f; font-size: 1.2rem; pointer-events: none;"></i>
-                    <input type="month" id="monthPicker" class="border-0 font-weight-bold p-0 bg-transparent m-0" 
-                           value="{{ date('Y-m') }}" 
-                           max="{{ date('Y-m') }}" 
+                    <input type="month" id="monthPicker" class="border-0 font-weight-bold p-0 bg-transparent m-0"
+                           value="{{ date('Y-m') }}"
+                           max="{{ date('Y-m') }}"
                            style="font-size: 1.05rem; width: 135px; outline: none; accent-color: #fc7a2f; color: #2d3748; cursor: pointer;">
-                    <i class="fas fa-chevron-down text-muted ml-1" style="font-size: 0.8rem; pointer-events: none;"></i> 
+                    <i class="fas fa-chevron-down text-muted ml-1" style="font-size: 0.8rem; pointer-events: none;"></i>
                 </div>
             </div>
 
@@ -68,28 +68,28 @@
 
         <div class="card border-0 shadow-sm mb-4" style="border-radius: 16px;">
             <div class="card-body p-4 d-flex align-items-center">
-                
+
                 <div class="d-flex flex-column justify-content-center border-right pr-4 mr-4" style="border-color: #edf2f7 !important;">
-                    <a href="#" class="font-weight-bold text-uppercase mb-1 d-flex align-items-center text-decoration-none" 
+                    <a href="#" class="font-weight-bold text-uppercase mb-1 d-flex align-items-center text-decoration-none"
                        style="font-size: 0.95rem; letter-spacing: 1px; transition: all 0.2s; padding: 6px 10px; border-radius: 6px; cursor: pointer; color: #000000 !important;"
-                       onmouseover="this.style.backgroundColor='rgba(0, 151, 167, 0.1)'; this.style.color='#0097a7'" 
+                       onmouseover="this.style.backgroundColor='rgba(0, 151, 167, 0.1)'; this.style.color='#0097a7'"
                        onmouseout="this.style.backgroundColor='transparent'; this.style.color='#000000'">
                         Main
                     </a>
-                    <a href="#" class="font-weight-bold text-uppercase d-flex align-items-center text-decoration-none" 
+                    <a href="#" class="font-weight-bold text-uppercase d-flex align-items-center text-decoration-none"
                        style="font-size: 0.95rem; letter-spacing: 1px; transition: all 0.2s; padding: 6px 10px; border-radius: 6px; cursor: pointer; color: #000000 !important;"
-                       onmouseover="this.style.backgroundColor='#fff0e6'; this.style.color='#fc7a2f'" 
+                       onmouseover="this.style.backgroundColor='#fff0e6'; this.style.color='#fc7a2f'"
                        onmouseout="this.style.backgroundColor='transparent'; this.style.color='#000000'">
                         Linkage
                     </a>
                 </div>
-                
-                @php 
-                    $circleStyle = "width: 48px; height: 48px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; font-weight: 700; transition: transform 0.2s ease-in-out;"; 
+
+                @php
+                    $circleStyle = "width: 48px; height: 48px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; font-weight: 700; transition: transform 0.2s ease-in-out;";
                 @endphp
-                
+
                 <div class="d-flex flex-wrap align-items-start justify-content-end flex-grow-1">
-                    
+
                     <div class="d-flex flex-column align-items-center mr-4 mt-2" style="cursor: pointer; width: 75px;" onmouseover="this.firstElementChild.style.transform='scale(1.15)'" onmouseout="this.firstElementChild.style.transform='scale(1)'">
                         <div style="{{ $circleStyle }} background-color: #dc3545; color: white; box-shadow: 0 4px 12px rgba(220,53,69,0.3);">24</div>
                         <span class="font-weight-bold text-uppercase text-center mt-2" style="font-size: 0.65rem; color: #dc3545; letter-spacing: 0.5px; line-height: 1.2;">BEHIND TARGET</span>
@@ -116,7 +116,7 @@
                     </div>
 
                 </div>
-                
+
             </div>
         </div>
 

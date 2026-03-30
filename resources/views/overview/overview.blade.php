@@ -6,12 +6,12 @@
     .indicator-box {
         background-color: #d4edda;
         border-radius: 12px;
-        padding: 1rem; 
-        height: 100%; 
-        box-shadow: 0 .125rem .25rem rgba(0,0,0,.075); 
+        padding: 1rem;
+        height: 100%;
+        box-shadow: 0 .125rem .25rem rgba(0,0,0,.075);
     }
     .indicator-icon-wrap {
-        width: 32px; 
+        width: 32px;
         height: 32px;
         background-color: #fff;
         border-radius: 50%;
@@ -21,7 +21,7 @@
         margin-right: 1rem;
         box-shadow: 0 .125rem .25rem rgba(0,0,0,.075);
     }
-    
+
     /* Titik Traffic Light */
     .traffic-dot {
         display: inline-block;
@@ -41,7 +41,7 @@
 
     /* Tombol Navigasi Tengah */
     .btn-initiative {
-        background-color: #0097a7;
+        background-color: #009ec3;
         border-radius: 8px;
         font-size: 0.9rem;
         letter-spacing: 0.5px;
@@ -210,7 +210,7 @@
             <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
                 <div class="card dept-card">
                     <i class="{{ $data['icon'] }} dept-bg-icon"></i>
-                    
+
                     <div class="dept-card-body">
                         <h6 class="font-weight-bold text-uppercase mb-2 border-bottom pb-2 text-dark" style="font-size: 0.75rem; letter-spacing: 0.5px;">{{ $data['title'] }}</h6>
 

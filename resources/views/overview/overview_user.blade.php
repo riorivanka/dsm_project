@@ -18,7 +18,7 @@
         margin-right: 1rem;
         box-shadow: 0 .125rem .25rem rgba(0,0,0,.075);
     }
-    
+
     /* Titik Traffic Light Atas */
     .traffic-dot {
         display: inline-block; width: 12px; height: 12px; border-radius: 50%; margin-right: 10px; flex-shrink: 0;
@@ -28,7 +28,7 @@
 
     /* Tombol Navigasi Tengah */
     .btn-initiative {
-        background-color: #0097a7; border-radius: 12px; font-size: 0.9rem; letter-spacing: 0.5px; border: none; color: #ffffff !important; text-decoration: none; min-height: 60px;
+        background-color: #009ec3; border-radius: 12px; font-size: 0.9rem; letter-spacing: 0.5px; border: none; color: #ffffff !important; text-decoration: none; min-height: 60px;
         display: flex; align-items: center; justify-content: center; width: 100%; text-transform: uppercase; font-weight: 700; box-shadow: 0 .125rem .25rem rgba(0,0,0,.075); transition: opacity 0.2s;
     }
     .btn-initiative:hover { opacity: 0.9; }
@@ -135,7 +135,7 @@
                     Corporate Group Initiative
                 </a>
             </div>
-            
+
             <div class="col-md-6 col-12">
                 <a href="{{ route('initiative.divisional') }}" class="btn-initiative">
                     Divisional Group Initiative
@@ -164,7 +164,7 @@
             <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
                 <div class="card dept-card">
                     <i class="{{ $data['icon'] }} dept-bg-icon"></i>
-                    
+
                     <div class="dept-card-body">
                         <h6 class="font-weight-bold text-uppercase mb-2 border-bottom pb-2 text-dark" style="font-size: 0.75rem; letter-spacing: 0.5px;">{{ $data['title'] }}</h6>
 
